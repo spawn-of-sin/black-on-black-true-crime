@@ -308,3 +308,33 @@ blockquote {
   flex: 1 1 0;              /* THIS IS THE KEY LINE – grow to fill available space */
   min-width: 0;             /* prevents overflow issues in flex children */
 }
+
+/* Resources page specific */
+.resources-module {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+}
+
+.resource-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.resource-buttons .btn {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    background-color: #000000;
+    border: 1px solid #ff3333;  /* Red accent to match theme */
+    color: white;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.resource-buttons .btn:hover {
+    background-color: rgba(255, 51, 51, 0.15);
+    box-shadow: 0 0 12px rgba(255, 51, 51, 0.6);  /* Stronger red glow */
+    transform: translateY(-2px);
+}
