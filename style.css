@@ -288,3 +288,23 @@ blockquote {
         order: 1;
     }
 }
+
+.main-layout.container {
+  display: flex;
+  flex-wrap: wrap;          /* optional: helps on very narrow screens */
+  gap: 20px;                /* or 1.5rem, etc. */
+  max-width: 1400px;        /* adjust to your preference */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.left-sidebar,
+.right-sidebar {
+  flex: 0 0 220px;          /* fixed width sidebars – prevents them from shrinking too much */
+  /* or flex: 0 0 25%; if you want percentage-based */
+}
+
+.main-content {
+  flex: 1 1 0;              /* THIS IS THE KEY LINE – grow to fill available space */
+  min-width: 0;             /* prevents overflow issues in flex children */
+}
